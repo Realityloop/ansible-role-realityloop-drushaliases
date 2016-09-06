@@ -1,0 +1,4 @@
+---
+drush_aliases: {}
+drush_aliases_ssh_options: '-q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+drush_home: "{{ lookup('pipe', 'drush ev \"print drush_server_home();\"') }}/.drush"

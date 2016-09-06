@@ -1,0 +1,7 @@
+---
+- name: Create Drush aliases.
+  template:
+    src: aliases.drushrc.php.j2
+    dest: "{{ drush_home }}/{{ item.name }}.aliases.drushrc.php"
+  with_items: drush_aliases
+  when: drush_aliases
